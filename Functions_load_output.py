@@ -51,7 +51,8 @@ def load_experiment_ds(exp_name, iters, prefix):
         
 
     """
-    casper_dir = '/glade/campaign/univ/ulnl0002/Gemma/AS_climBC_5yr_exp/'
+    # casper_dir = '/glade/campaign/univ/ulnl0002/Gemma/AS_climBC_5yr_exp/'
+    casper_dir = '/glade/campaign/univ/uwas0134/Gemma/AS_climBC_5yr_exp/'
     run_path = casper_dir + exp_name + '/diags/'
     grid_dir = casper_dir + 'input/'
     
@@ -75,7 +76,7 @@ def load_experiment_ds(exp_name, iters, prefix):
                  prefix = prefix, delta_t=120, ref_date = '1992-01-01',\
                  calendar='noLeap')
     else:
-        run_path = '/glade/campaign/univ/ulnl0002/Gemma/AS_climBC_control/run/diags/'
+        run_path = '/glade/campaign/univ/uwas0134/Gemma/AS_climBC_control/run/diags/'
         run_ds = xmitgcm.open_mdsdataset(run_path, \
                  grid_dir = grid_dir,\
                  iters = iters,\
@@ -226,7 +227,8 @@ def get_bathymetry_and_troughs():
 
     """
     
-    grid_dir = '/glade/u/home/gemmao/MITgcm/experiments/AS_climBC_5yr_exp/input/'
+    # grid_dir = '/glade/u/home/gemmao/MITgcm/experiments/AS_climBC_5yr_exp/input/'
+    grid_dir = '/glade/campaign/univ/uwas0134/Gemma/AS_climBC_5yr_exp/input/'
     #get bathymetry to plot as contours
     b_fname = grid_dir + '1080_BATHY_2_rignot.bin'
     f_b = open(b_fname)
